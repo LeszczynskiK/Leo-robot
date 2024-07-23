@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>leo_autonomy</name>
+  <version>0.0.0</version>
+  <description>The leo_autonomy package</description>
+
+  <maintainer email="dawidmoscicki@gmail.com">Dawid Moscicki</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>grid_map_ros</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_export_depend>gazebo_ros</build_export_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>grid_map_ros</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>grid_map_ros</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+
+</package>

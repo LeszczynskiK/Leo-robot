@@ -1,0 +1,74 @@
+<launch>
+
+  <arg name="fixed" default="false"/>
+  <arg name="robot_ns" default="/"/>
+  <arg name="model_name" default="leo"/>
+
+  <arg name="world_name" default="$(find leo_autonomy)/worlds/static.world"/>
+  <arg name="paused" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="debug" default="false"/>
+  <arg name="verbose" default="true"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="debug" value="$(arg debug)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+  </include>
+
+  <arg name="x" default="-6.5" />
+  <arg name="y" default="-6.5" />
+  <arg name="z" default="0.1" />
+  <arg name="R" default="0.0" />
+  <arg name="P" default="0.0" />
+  <arg name="Y" default="0.0" />
+  <arg name="model" default="$(find leo_description)/urdf/leo_sim.urdf.xacro" />
+
+  <group ns="$(arg robot_ns)">
+    <param name="robot_description" command="xacro $(arg model) 
+      fixed:=$(arg fixed)
+      robot_ns:='$(arg robot_ns)'
+    " />
+    <rosparam command="load" file="$(find leo_gazebo)/config/pid_gains.yaml" />
+    <node name="urdf_spawner"
+      pkg="gazebo_ros"
+      type="spawn_model"
+      respawn="false"
+      args="-urdf 
+      -x $(arg x) -y $(arg y) -z $(arg z)
+      -R $(arg R) -P $(arg P) -Y $(arg Y)
+      -model $(arg model_name) 
+      -param robot_description
+    " />
+    <rosparam command="load" file="$(find leo_gazebo)/config/controllers.yaml" />
+    <node name="controller_spawner"
+      pkg="controller_manager"
+      type="spawner" args="
+      controllers/state
+      controllers/diff_drive
+    " />
+    <node name="robot_state_publisher"
+      pkg="robot_state_publisher"
+      type="robot_state_publisher" />
+    <node name="cmd_vel_relay"
+      pkg="topic_tools"
+      type="relay"
+      args="cmd_vel controllers/diff_drive/cmd_vel" />
+    <node name="odom_relay"
+      pkg="topic_tools"
+      type="relay"
+      args="controllers/diff_drive/odom wheel_odom_with_covariance" />
+  </group>
+
+  <node name="leo_autonomy" pkg="leo_autonomy" type="leo_autonomy"/>
+    <node pkg="grid_map_visualization" type="grid_map_visualization" name="grid_map_visualization" args="map" output="screen">
+      <rosparam command="load" file="$(find leo_autonomy)/config/grid_map.yaml"/>
+  </node>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find leo_autonomy)/config/rviz.rviz" />
+
+  <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen" args="/cmd_vel:=/controllers/diff_drive/cmd_vel" />
+
+  <node name="rqt_plot" pkg="rqt_plot" type="rqt_plot" output="screen" args="/controllers/diff_drive/linear/current/data /controllers/diff_drive/linear/setpoint/data /controllers/diff_drive/angular/current/data /controllers/diff_drive/angular/setpoint/data" />
+</launch>

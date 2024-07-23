@@ -1,0 +1,34 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/dawid/aps_hardkill/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/dawid/aps_hardkill/src/aps_radar_ros/include/**",
+        "/home/dawid/aps_hardkill/src/aps_shared/include/**",
+        "/home/dawid/aps_hardkill/src/depthai-ros/depthai_bridge/include/**",
+        "/home/dawid/aps_hardkill/src/gstreamer/include/**",
+        "/home/dawid/aps_hardkill/src/hardkill_vision/include/**",
+        "/home/dawid/aps_hardkill/src/interceptor/include/**",
+        "/home/dawid/aps_hardkill/src/mavros/libmavconn/include/**",
+        "/home/dawid/aps_hardkill/src/mavros/mavros/include/**",
+        "/home/dawid/aps_hardkill/src/mavros/mavros_msgs/include/**",
+        "/home/dawid/aps_hardkill/src/radar_transform/include/**",
+        "/home/dawid/aps_hardkill/src/rviz_ortho_view_controller/include/**",
+        "/home/dawid/aps_hardkill/src/mavros/test_mavros/include/**",
+        "/home/dawid/aps_hardkill/src/trajectory_visualization/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

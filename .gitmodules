@@ -1,0 +1,9 @@
+[submodule "src/leo_simulator"]
+	path = src/leo_simulator
+	url = https://github.com/LeoRover/leo_simulator.git
+[submodule "src/leo_common"]
+	path = src/leo_common
+	url = https://github.com/LeoRover/leo_common.git
+[submodule "src/leo_desktop"]
+	path = src/leo_desktop
+	url = https://github.com/LeoRover/leo_desktop.git

@@ -1,0 +1,135 @@
+Diagnostics:
+  ClangTidy:
+    Add: [
+      "readability-*",
+      "performance-*",
+      "modernize-*",
+      "misc-no-recursion",
+      "llvm-include-order",
+      "cppcoreguidelines-*",
+      "bugprone-*"
+    ]
+    Remove: [
+      "readability-braces-around-statements",
+      "readability-identifier-naming",
+      "readability-identifier-length",
+      "readability-isolate-declaration",
+      "modernize-use-trailing-return-type",
+      "bugprone-easily-swappable-parameters",
+
+      "cppcoreguidelines-narrowing-conversions",
+      "cppcoreguidelines-avoid-magic-numbers",
+      "cppcoreguidelines-avoid-do-while",
+      "cppcoreguidelines-avoid-do-while",
+      "cppcoreguidelines-pro-type-vararg",
+      "cppcoreguidelines-pro-bounds-array-to-pointer-decay",
+
+      "modernize-avoid-bind"
+    ]
+
+    CheckOptions:
+      readability-identifier-naming.NamespaceCase: snake_case
+      readability-identifier-naming.VariableCase: camelBack
+      readability-identifier-naming.FunctionCase: camelBack
+      readability-identifier-naming.GlobalConstantCase: UPPER_CASE
+      readability-identifier-naming.ConstantCase: UPPER_CASE
+
+      # Classes and structs
+      readability-identifier-naming.ClassCase: CamelCase
+      readability-identifier-naming.StructCase: CamelCase
+      readability-identifier-naming.MemberCase: camelBack
+      readability-identifier-naming.MethodCase: camelBack
+      readability-identifier-naming.ConstantMemberCase: UPPER_CASE
+
+      readability-identifier-naming.PrivateMemberPrefix: _
+      readability-identifier-naming.PrivateMemberCase: camelBack
+      readability-identifier-naming.ProtectedMemberPrefix: _
+      readability-identifier-naming.ProtectedMemberCase: camelBack
+
+      # Enums
+      readability-identifier-naming.EnumCase: CamelCase
+      readability-identifier-naming.EnumConstantCase: UPPER_CASE
+
+      # Magic numbers
+      readability-magic-numbers.IgnoredIntegerValues: 1;2;3;4;8;90
+      readability-magic-numbers.IgnoredFloatingPointValues: 1.0;2.0;3.0;4.0;8.0;90.0;100.0
+---
+
+If:
+  PathMatch: src/leo_common/leo/.*
+CompileFlags:
+  CompilationDatabase: build/leo/
+
+---
+
+If:
+  PathMatch: src/leo_common/leo_description/.*
+CompileFlags:
+  CompilationDatabase: build/leo_description/
+
+---
+
+If:
+  PathMatch: src/leo_common/leo_msgs/.*
+CompileFlags:
+  CompilationDatabase: build/leo_msgs/
+
+---
+
+If:
+  PathMatch: src/leo_common/leo_teleop/.*
+CompileFlags:
+  CompilationDatabase: build/leo_teleop/
+
+---
+
+If:
+  PathMatch: src/leo_desktop/leo_desktop/.*
+CompileFlags:
+  CompilationDatabase: build/leo_desktop/
+
+---
+
+If:
+  PathMatch: src/leo_desktop/leo_viz/.*
+CompileFlags:
+  CompilationDatabase: build/leo_viz/
+
+---
+
+If:
+  PathMatch: src/leo_simulator/leo_gazebo/.*
+CompileFlags:
+  CompilationDatabase: build/leo_gazebo/
+
+---
+
+If:
+  PathMatch: src/leo_simulator/leo_gazebo_plugins/.*
+CompileFlags:
+  CompilationDatabase: build/leo_gazebo_plugins/
+
+---
+
+If:
+  PathMatch: src/leo_simulator/leo_gazebo_worlds/.*
+CompileFlags:
+  CompilationDatabase: build/leo_gazebo_worlds/
+
+---
+
+If:
+  PathMatch: src/leo_simulator/leo_simulator/.*
+CompileFlags:
+  CompilationDatabase: build/leo_simulator/
+
+---
+
+If:
+  PathMatch: src/leo_autonomy/.*
+CompileFlags:
+  CompilationDatabase: build/leo_autonomy/
+
+
+
+

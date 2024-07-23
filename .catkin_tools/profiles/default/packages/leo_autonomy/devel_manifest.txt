@@ -1,0 +1,8 @@
+leo_autonomy
+/home/dawid/RoverAutonomy/devel/.private/leo_autonomy/cmake.lock /home/dawid/RoverAutonomy/devel/./cmake.lock
+/home/dawid/RoverAutonomy/devel/.private/leo_autonomy/share/leo_autonomy/cmake/leo_autonomyConfig.cmake /home/dawid/RoverAutonomy/devel/share/leo_autonomy/cmake/leo_autonomyConfig.cmake
+/home/dawid/RoverAutonomy/devel/.private/leo_autonomy/share/leo_autonomy/cmake/leo_autonomyConfig-version.cmake /home/dawid/RoverAutonomy/devel/share/leo_autonomy/cmake/leo_autonomyConfig-version.cmake
+/home/dawid/RoverAutonomy/devel/.private/leo_autonomy/lib/libenviroment_manager.so /home/dawid/RoverAutonomy/devel/lib/libenviroment_manager.so
+/home/dawid/RoverAutonomy/devel/.private/leo_autonomy/lib/libobstacle_spawner.so /home/dawid/RoverAutonomy/devel/lib/libobstacle_spawner.so
+/home/dawid/RoverAutonomy/devel/.private/leo_autonomy/lib/leo_autonomy/leo_autonomy /home/dawid/RoverAutonomy/devel/lib/leo_autonomy/leo_autonomy
+/home/dawid/RoverAutonomy/devel/.private/leo_autonomy/lib/pkgconfig/leo_autonomy.pc /home/dawid/RoverAutonomy/devel/lib/pkgconfig/leo_autonomy.pc

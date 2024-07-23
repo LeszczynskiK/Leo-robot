@@ -1,0 +1,6 @@
+leo_simulator/leo_gazebo_plugins
+/home/dawid/RoverAutonomy/devel/.private/leo_gazebo_plugins/cmake.lock /home/dawid/RoverAutonomy/devel/./cmake.lock
+/home/dawid/RoverAutonomy/devel/.private/leo_gazebo_plugins/share/leo_gazebo_plugins/cmake/leo_gazebo_pluginsConfig.cmake /home/dawid/RoverAutonomy/devel/share/leo_gazebo_plugins/cmake/leo_gazebo_pluginsConfig.cmake
+/home/dawid/RoverAutonomy/devel/.private/leo_gazebo_plugins/share/leo_gazebo_plugins/cmake/leo_gazebo_pluginsConfig-version.cmake /home/dawid/RoverAutonomy/devel/share/leo_gazebo_plugins/cmake/leo_gazebo_pluginsConfig-version.cmake
+/home/dawid/RoverAutonomy/devel/.private/leo_gazebo_plugins/lib/libleo_gazebo_differential_plugin.so /home/dawid/RoverAutonomy/devel/lib/libleo_gazebo_differential_plugin.so
+/home/dawid/RoverAutonomy/devel/.private/leo_gazebo_plugins/lib/pkgconfig/leo_gazebo_plugins.pc /home/dawid/RoverAutonomy/devel/lib/pkgconfig/leo_gazebo_plugins.pc

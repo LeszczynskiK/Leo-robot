@@ -1,0 +1,6 @@
+Astar
+/home/dawid/RoverAutonomy/devel/.private/astar/cmake.lock /home/dawid/RoverAutonomy/devel/./cmake.lock
+/home/dawid/RoverAutonomy/devel/.private/astar/share/astar/cmake/astarConfig.cmake /home/dawid/RoverAutonomy/devel/share/astar/cmake/astarConfig.cmake
+/home/dawid/RoverAutonomy/devel/.private/astar/share/astar/cmake/astarConfig-version.cmake /home/dawid/RoverAutonomy/devel/share/astar/cmake/astarConfig-version.cmake
+/home/dawid/RoverAutonomy/devel/.private/astar/lib/astar/astar /home/dawid/RoverAutonomy/devel/lib/astar/astar
+/home/dawid/RoverAutonomy/devel/.private/astar/lib/pkgconfig/astar.pc /home/dawid/RoverAutonomy/devel/lib/pkgconfig/astar.pc

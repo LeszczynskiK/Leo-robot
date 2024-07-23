@@ -1,0 +1,2 @@
+leo_desktop/leo_desktop
+/home/dawid/RoverAutonomy/devel/.private/leo_desktop/cmake.lock /home/dawid/RoverAutonomy/devel/./cmake.lock
